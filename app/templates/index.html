@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+   <body>
+        <div>
+        <h2> Items <h2>
+        <table border = 1>
+        {% for item, price in items.items() %}
+            <tr>
+                <th> {{ item }} </th>
+                <td>{{ price }}</td>
+            </tr>
+        {% endfor %}
+        </table>
+        </div>
+
+        <div style="position: absolute; left: 400px; top: 0px; padding: 0px; border: 0px;">
+        <form action = "http://localhost:8080/add_item" method = "post">
+            <p> Enter Item:</p>
+            <p><input type = "text" name = "item_name" /></p>
+            <p> Enter price threshold:</p>
+            <p><input type = "text" name = "price" /></p> 
+            <p><input type = "submit" value = "submit" /></p>
+            
+        </form>
+
+        <form action = "http://localhost:8080/remove_item" method = "post">
+            <p> Remove Item:</p>
+            <p><input type = "text" name = "item_name" /></p>
+            <p><input type = "submit" value = "remove" /></p>
+        </form>
+        </div>
+
+        <!-- <div style="position: absolute; left: 800px; top: 0px; padding: 0px; border: 0px;">
+            <h2> Links <h2>
+            <table border = 1>
+            {% for id, link in links %}
+                <tr>
+                    <th> {{ id + 1 }} </th>
+                    <td>{{ link }}</td>
+                </tr>
+            {% endfor %}
+            </table>
+            </div>
+
+            <div style="position: absolute; left: 1200px; top: 0px; padding: 0px; border: 0px;">
+                <form action = "http://localhost:8080/add_link" method = "post">
+                    <p> Enter Link:</p>
+                    <p><input type = "text" name = "link" /></p>
+                    <p><input type = "submit" value = "submit" /></p>
+                    
+                </form>
+        
+                <form action = "http://localhost:8080/remove_link" method = "post">
+                    <p> Remove link by link number:</p>
+                    <p><input type = "text" name = "link_id" /></p>
+                    <p><input type = "submit" value = "remove" /></p>
+                </form>
+                </div> -->
+   </body>
+</html>
