@@ -3,7 +3,7 @@ import smtplib, ssl, base64
 port = 465  # For SSL
 smtp_server = "smtp.gmail.com"
 sender_email = "firewatchalerts@gmail.com"
-password = base64.b64decode("YmFidXJlbWNubmlianJsaQ==").decode("utf-8")
+password = ""
 
 
 def send_alerts(items):
